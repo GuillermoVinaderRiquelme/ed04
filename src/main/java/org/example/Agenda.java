@@ -8,7 +8,7 @@ import java.util.*;
  * @version 1.0
  *
  */
-public class Agenda {
+public class Agenda implements IAgenda {
     /**
      * Atributo que almacena una lista de contactos
      */
@@ -27,6 +27,7 @@ public class Agenda {
      * @param phone Número de teléfono del contacto
      */
 
+    @Override
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Persona c : contacts) {
@@ -47,6 +48,7 @@ public class Agenda {
      * Método que permite borrar un contacto de la agenda a partir de su nombre
      * @param name Nombre del contacto a borrar
      */
+    @Override
     public void removeContact(String name) {
         Iterator<Persona> it = contacts.iterator();
 
@@ -65,6 +67,7 @@ public class Agenda {
      * @param oldPhone Número de teléfono antiguo. Es decir, el que se desea eliminar
      * @param newPhone Nuevo número de teléfono. Es decir, el que se desea añadir en lugar del antiguo.
      */
+    @Override
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
         for (Persona c : contacts) {
             if (c.getName().equalsIgnoreCase(name)) {
@@ -83,6 +86,7 @@ public class Agenda {
      * Método get para extraer la lista de contactos de una agenda
      * @return Una lista de objetos de clase Contacto
      */
+    @Override
     public List<Persona> getContacts() {
         return this.contacts;
     }
