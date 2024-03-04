@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Una clase Contacto que almacena el nombre y una lista de teléfonos para cada contacto.
  * @author María José (profesora ED)
  * @version 1.0
- * Una clase Contacto que almacena el nombre y una lista de teléfonos para cada contacto.
  */
-class Contacto {
+public class Contacto {
     /**
      * Atributo que almacena el nombre del contacto
      */

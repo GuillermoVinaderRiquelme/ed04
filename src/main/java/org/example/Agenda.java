@@ -3,9 +3,10 @@ package org.example;
 import java.util.*;
 
 /**
+ * Clase Agenda que contiene una lista de objetos de la clase Contacto
  * @author María José (profesora ED)
  * @version 1.0
- * Clase Agenda que contiene una lista de objetos de la clase Contacto
+ *
  */
 public class Agenda {
     /**
