@@ -9,13 +9,7 @@ import java.util.List;
  * @version 1.0
  */
 public class Contacto {
-    /**
-     * Atributo que almacena el nombre del contacto
-     */
     private String name;
-    /**
-     * Atributo que almacena una lista de teléfonos (String) asociados al contacto
-     */
     private List<String> phones;
 
     /**
@@ -25,12 +19,14 @@ public class Contacto {
      */
 
     public Contacto(String name, String phone) {
-        this.name = name;
-        this.phones = new ArrayList<>();
-        this.phones.add(phone);
+        this.setName(name);
+        this.setPhones(new ArrayList<>());
+        this.getPhones().add(phone);
     }
 
     /**
+     * Atributo que almacena el nombre del contacto
+     */ /**
      * Método get para el atributo Nombre
      * @return Un String con el nombre del contacto
      */
@@ -39,10 +35,20 @@ public class Contacto {
     }
 
     /**
+     * Atributo que almacena una lista de teléfonos (String) asociados al contacto
+     */ /**
      * Método get para la lista de teléfonos
      * @return Devuelve un array de Strings con los teléfonos asociados al contacto
      */
     public List<String> getPhones() {
         return this.phones;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPhones(List<String> phones) {
+        this.phones = phones;
     }
 }
